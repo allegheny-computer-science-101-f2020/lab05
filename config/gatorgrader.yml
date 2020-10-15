@@ -1,0 +1,125 @@
+---
+name: cs101f2020-lab05
+break: true
+indent: 4
+---
+
+# Learn more about GatorGrader and its supported checks by visiting this web site:
+# https://github.com/GatorEducator/gatorgrader
+
+# Explanation:
+# --> a check without an "--exact" runs a count for an entity as an "at least"
+# --> checks below a file in a specified directory are for that specific file and directory
+# --> checks that appear stand-alone are for an entire Git repository
+
+# --> check the source code for various characteristics
+src/main:
+    java:
+        labfive/data/ResultsTable.java:
+            ConfirmFileExists
+            CountSingleLineComments --language Java --count 2
+            CountMultipleLineComments --language Java --count 12
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+            MatchFileFragment --fragment "package labfive" --count 1 --exact
+            MatchFileFragment --fragment "double ratio =" --count 1 --exact
+            MatchFileFragment --fragment "println" --count 0 --exact
+
+# --> check the source code for various characteristics
+src/main:
+    java:
+        labfive/experiment/Campaign.java:
+            ConfirmFileExists
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+            MatchFileFragment --fragment "package labfive" --count 1 --exact
+            MatchFileFragment --fragment "println" --count 0 --exact
+
+# --> check the source code for various characteristics
+src/main:
+    java:
+        labfive/experiment/Experiment.java:
+            ConfirmFileExists
+            CountSingleLineComments --language Java --count 2
+            CountMultipleLineComments --language Java --count 2
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+            MatchFileFragment --fragment "package labfive" --count 1 --exact
+            MatchFileFragment --fragment "bubbleSort.getName()" --count 1 --exact
+            MatchFileFragment --fragment "insertionSort.getName()" --count 1 --exact
+            MatchFileFragment --fragment "println(" --count 7
+
+# --> check the source code for various characteristics
+src/main:
+    java:
+        labfive/experiment/RunCampaign.java:
+            ConfirmFileExists
+            CountSingleLineComments --language Java --count 4
+            CountMultipleLineComments --language Java --count 7
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+            MatchFileFragment --fragment "package labfive" --count 1 --exact
+            MatchFileFragment --fragment "Random random = new Random();" --count 1 --exact
+            MatchFileFragment --fragment "sort.getName(" --count 2
+            MatchFileFragment --fragment "println(" --count 3
+
+# --> check the source code for various characteristics
+src/test:
+    java:
+        labfive/TestBubbleSort.java:
+            ConfirmFileExists
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+            MatchFileFragment --fragment "package labfive" --count 1 --exact
+
+# --> check the source code for various characteristics
+src/test:
+    java:
+        labfive/TestInsertionSort.java:
+            ConfirmFileExists
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+            MatchFileFragment --fragment "package labfive" --count 1 --exact
+
+# --> check the source code for various characteristics
+src/test:
+    java:
+        labfive/TestResultsTable.java:
+            ConfirmFileExists
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+            MatchFileFragment --fragment "package labfive" --count 1 --exact
+
+# --> check the source code for various characteristics
+src/test:
+    java:
+        labfive/TestRunCampaign.java:
+            ConfirmFileExists
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+            MatchFileFragment --fragment "package labfive" --count 1 --exact
+
+# --> check the technical writing for various characteristics
+writing/reflection.md:
+    ConfirmFileExists
+    CountFileParagraphs --count 8
+    CountFileWords --count 700
+    CountMarkdownTags --tag "heading" --count 11
+    CountMarkdownTags --tag "code_block" --count 2 --exact
+    CountMarkdownTags --tag "code" --count 5
+    CountMarkdownTags --tag "list" --count 1 --exact
+    MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+
+# --> check that the number of commits in the Git repository is beyond a baseline
+CountCommits --count 1
+
+# --> check that the program builds, tests, and executes correctly
+ExecuteCommand --command "gradle build"
+ExecuteCommand --command "gradle test"
+
+# NOTE: Optionally, run the gradle run command, bearing in mind that it could take a full minute
+#
+# ExecuteCommand --command "gradle -q --console plain run"
+
+# --> NOTE: Do not run repeated checks on the content of the output since this program runs
+# a campaign of experiments with BubbleSort and InsertionSort and this may be time consuming
