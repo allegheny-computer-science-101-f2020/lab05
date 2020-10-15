@@ -20,7 +20,7 @@ public class Experiment {
     System.out.println(bubbleSortResultsTable.toString());
     System.out.println();
     // TODO: Create an InsertionSort object and run it in a campaign
-    // TODO: Follow the strategy in the above exaple to evaluate InsertionSort
+    // TODO: Follow the strategy in the above example to evaluate InsertionSort
     // TODO: Make sure that you understand how runSorterCampaign.run() works
     // TODO: Mke sure that your program prints the results of running the second campaign
   }

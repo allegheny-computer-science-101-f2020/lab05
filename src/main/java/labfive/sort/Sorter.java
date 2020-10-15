@@ -4,7 +4,6 @@ package labfive.sort;
  * An interface for all of the sorting implementations.
  *
  * @author Janyl Jumadinova
- * @author
  */
 
 public abstract class Sorter {
