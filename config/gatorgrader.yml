@@ -111,7 +111,7 @@ writing/reflection.md:
     MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
 
 # --> check that the number of commits in the Git repository is beyond a baseline
-CountCommits --count 1
+CountCommits --count 10
 
 # --> check that the program builds, tests, and executes correctly
 ExecuteCommand --command "gradle build"
