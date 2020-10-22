@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-- [Objectives](#table-of-contents)
+- [Objectives](#objectives)
 - [Introduction](#introduction)
 - [Continuous Learning](#continuous-learning)
 
